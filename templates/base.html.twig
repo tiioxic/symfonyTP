@@ -6,13 +6,32 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {% block stylesheets %}
             {{ ux_controller_link_tags() }}
+            
         {% endblock %}
 
         {% block javascripts %}
+        <script src="https://cdn.tailwindcss.com"></script>
 {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>
+        {% block header %}
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Produits</a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Connexion</a></li>
+                    <li><a href="">Déconnexion</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% endblock %}
         {% block body %}{% endblock %}
+        {% block footer %}{% endblock %}
     </body>
 </html>
